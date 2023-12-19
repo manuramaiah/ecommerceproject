@@ -1,0 +1,1 @@
+from django.urls import pathfrom . import viewsapp_name = 'ecommerce_app'urlpatterns = [    path('', views.allProCat,name='allProCat'),    path('<slug:slug>', views.allProCat,name='products_by_category'),    path('<slug:c_slug>/<slug:product_slug>/', views.ProductDetails,name='proCatdetail'),]
